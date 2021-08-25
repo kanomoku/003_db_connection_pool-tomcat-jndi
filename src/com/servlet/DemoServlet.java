@@ -27,10 +27,10 @@ public class DemoServlet extends HttpServlet {
 			//5.1 在web 项目的META-INF 中存放context.xml,在context.xml 编写数据库连接池相关属性
 			//5.2 把项目发布到tomcat 中,数据库连接池产生了
 			//6 可以在java 中使用jndi 获取数据库连接池中对象
-			//6.1 Context:上下文接口.context.xml 文件对象类型
+			//6.1 Context:上下文接口.专门获取context.xml文件对象的一个接口
 			//6.2 代码,下面3行是JNDI代码:
 			Context c = new InitialContext();
-			DataSource s =(DataSource) c.lookup("java:comp/env/test");
+			DataSource s =(DataSource) c.lookup("java:comp/env/test");// test为数据库连接池名字
 			Connection conn = s.getConnection();
 			
 			PreparedStatement ps= conn.prepareStatement("select * from flower");

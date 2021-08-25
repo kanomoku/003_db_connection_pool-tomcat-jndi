@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- 
 		maxActive="50"  
 		maxIdle="20" 
 		name="test" 数据库连接池的名字
 		auth="Container"  由tomcat管理数据库连接池
-		maxWait="10000" 取得Idle状态的对象转成active状态,等待取得Idle对象的时间，取不到就不取了然后报异常
+		maxWait="10000" 取得Idle状态的对象去转成active状态,等待取得Idle对象的时间，取不到就不取了然后报异常
 		type="javax.sql.DataSource" 在java中通过name属性取得连接池对象时，他在java中的类型
 		-->
 <Context>
 	<Resource 
 		driverClassName="com.mysql.jdbc.Driver"
-		url="jdbc:mysql://localhost:3306/ssm" 
+		url="jdbc:mysql://localhost:8082:3306/ssm" 
 		username="root"
 		password="123456" 
 		maxActive="50" 
